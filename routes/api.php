@@ -52,3 +52,5 @@ Route::get('/code/{code}/vragenlijst', [App\Http\Controllers\CodeController::cla
 
 //REGISTER ROUTE OWO
 Route::POST('/users/create', [App\Http\Controllers\UserController::class, 'register']);
+
+
