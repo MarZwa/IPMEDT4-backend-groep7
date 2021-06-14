@@ -12,7 +12,7 @@
         <h2>{{ $details['title'] }}</h2>
         <h3>Klik op deze knop:</h3>
         <br>
-        <a style="color: white; background-color: #F7B733; width: 50px; text-decoration: none; border-radius: 15px" class="link" href="http://localhost:3200/inviteCode={{ $details['body'] }}">Tevredenheidsonderzoek</a>
+        <a style="color: white; background-color: #F7B733; padding: 20px; text-decoration: none; border-radius: 15px" class="link" href="http://localhost:3200/inviteCode={{ $details['body'] }}">Tevredenheidsonderzoek</a>
         <br>
         <br>
         <h3>Of gebruik code: </h3>
