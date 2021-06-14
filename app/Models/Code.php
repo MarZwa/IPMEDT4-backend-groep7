@@ -9,6 +9,13 @@ class Code extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'code',
+        'vragenlijst-id',
+        'used',
+        'questions_answered'
+    ];
+
     protected $table = 'codes';
 
     public function mijnVragenlijst(){
