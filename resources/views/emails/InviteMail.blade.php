@@ -16,8 +16,9 @@
         <br>
         <br>
         <h3>Of gebruik code: </h3>
-        <h2>{{ $details['body'] }} op </h2><a href="http://localhost:3200/inviteCode">www.ipmedt4tevredenheidsonderzoek.nl</a>
+        <h2>{{ $details['body'] }}  </h2>
+        <h2>op</h2>
+        <a href="http://localhost:3200/inviteCode">www.ipmedt4tevredenheidsonderzoek.nl</a>
     </div>
-    
 </body>
 </html>
