@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Vragenlijst;
+use App\Models\Mailgroep;
 use App\Models\Code;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\InviteMail;
@@ -41,11 +42,11 @@ class VragenlijstController extends Controller
     public function sendInviteMail(Request $request){
 
         $fields = $request->validate([
-            'emails' => 'required',
+            'mailgroep' => 'required',
             'vragenlijst' => 'required'
         ]);
 
-        $receivers  = $fields['emails'];
+        $receivers  = Mailgroep::find($fields['mailgroep'])->mijnEmailAdressen;
         $vragenlijst = Vragenlijst::find($fields['vragenlijst']);
 
 
@@ -64,7 +65,7 @@ class VragenlijstController extends Controller
                 'body' => $newcode, 
             ];
     
-            Mail::to($receiver)->send(new InviteMail($details));
+            Mail::to($receiver->email)->send(new InviteMail($details));
         }
     }
 }
