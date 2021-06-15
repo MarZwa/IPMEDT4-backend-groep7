@@ -21,5 +21,181 @@ class VragenSeeder extends Seeder
             'opties' => '',
             'categorie' => '1'
         ]);
+
+        DB::table('vraag')->insert([
+            'vragenlijst-id' => 1,
+            'vraag' => 'Werkt deze vraag?',
+            'vraagsoort' => 2,
+            'opties' => '',
+            'categorie' => '1'
+        ]);
+
+        DB::table('vraag')->insert([
+            'vragenlijst-id' => 1,
+            'vraag' => 'Werkt deze vraag?',
+            'vraagsoort' => 3,
+            'opties' => 'test, test, test, test',
+            'categorie' => '1'
+        ]);
+
+        DB::table('vraag')->insert([
+            'vragenlijst-id' => 1,
+            'vraag' => 'Werkt deze vraag?',
+            'vraagsoort' => 2,
+            'opties' => '',
+            'categorie' => '1'
+        ]);
+
+        DB::table('vraag')->insert([
+            'vragenlijst-id' => 1,
+            'vraag' => 'Werkt deze vraag?',
+            'vraagsoort' => 2,
+            'opties' => '',
+            'categorie' => '1'
+        ]);
+
+        DB::table('vraag')->insert([
+            'vragenlijst-id' => 1,
+            'vraag' => 'Werkt deze vraag?',
+            'vraagsoort' => 2,
+            'opties' => '',
+            'categorie' => '1'
+        ]);
+
+        DB::table('vraag')->insert([
+            'vragenlijst-id' => 1,
+            'vraag' => 'Werkt deze vraag?',
+            'vraagsoort' => 2,
+            'opties' => '',
+            'categorie' => '1'
+        ]);
+
+        DB::table('vraag')->insert([
+            'vragenlijst-id' => 1,
+            'vraag' => 'Werkt deze vraag?',
+            'vraagsoort' => 2,
+            'opties' => '',
+            'categorie' => '1'
+        ]);
+
+        DB::table('vraag')->insert([
+            'vragenlijst-id' => 1,
+            'vraag' => 'Werkt deze vraag?',
+            'vraagsoort' => 2,
+            'opties' => '',
+            'categorie' => '1'
+        ]);
+
+        DB::table('vraag')->insert([
+            'vragenlijst-id' => 1,
+            'vraag' => 'Werkt deze vraag?',
+            'vraagsoort' => 2,
+            'opties' => '',
+            'categorie' => '1'
+        ]);
+
+        DB::table('vraag')->insert([
+            'vragenlijst-id' => 1,
+            'vraag' => 'Werkt deze vraag?',
+            'vraagsoort' => 2,
+            'opties' => '',
+            'categorie' => '1'
+        ]);
+
+        DB::table('vraag')->insert([
+            'vragenlijst-id' => 1,
+            'vraag' => 'Werkt deze vraag?',
+            'vraagsoort' => 2,
+            'opties' => '',
+            'categorie' => '1'
+        ]);
+
+        DB::table('vraag')->insert([
+            'vragenlijst-id' => 1,
+            'vraag' => 'Werkt deze vraag?',
+            'vraagsoort' => 2,
+            'opties' => '',
+            'categorie' => '1'
+        ]);
+
+        DB::table('vraag')->insert([
+            'vragenlijst-id' => 1,
+            'vraag' => 'Werkt deze vraag?',
+            'vraagsoort' => 2,
+            'opties' => '',
+            'categorie' => '1'
+        ]);
+
+        DB::table('vraag')->insert([
+            'vragenlijst-id' => 1,
+            'vraag' => 'Werkt deze vraag?',
+            'vraagsoort' => 2,
+            'opties' => '',
+            'categorie' => '1'
+        ]);
+
+        DB::table('vraag')->insert([
+            'vragenlijst-id' => 1,
+            'vraag' => 'Werkt deze vraag?',
+            'vraagsoort' => 2,
+            'opties' => '',
+            'categorie' => '1'
+        ]);
+
+        DB::table('vraag')->insert([
+            'vragenlijst-id' => 1,
+            'vraag' => 'Werkt deze vraag?',
+            'vraagsoort' => 2,
+            'opties' => '',
+            'categorie' => '1'
+        ]);
+
+        DB::table('vraag')->insert([
+            'vragenlijst-id' => 1,
+            'vraag' => 'Werkt deze vraag?',
+            'vraagsoort' => 2,
+            'opties' => '',
+            'categorie' => '1'
+        ]);
+
+        DB::table('vraag')->insert([
+            'vragenlijst-id' => 1,
+            'vraag' => 'Werkt deze vraag?',
+            'vraagsoort' => 2,
+            'opties' => '',
+            'categorie' => '1'
+        ]);
+
+        DB::table('vraag')->insert([
+            'vragenlijst-id' => 1,
+            'vraag' => 'Werkt deze vraag?',
+            'vraagsoort' => 2,
+            'opties' => '',
+            'categorie' => '1'
+        ]);
+
+        DB::table('vraag')->insert([
+            'vragenlijst-id' => 1,
+            'vraag' => 'Werkt deze vraag?',
+            'vraagsoort' => 2,
+            'opties' => '',
+            'categorie' => '1'
+        ]);
+
+        DB::table('vraag')->insert([
+            'vragenlijst-id' => 1,
+            'vraag' => 'Werkt deze vraag?',
+            'vraagsoort' => 2,
+            'opties' => '',
+            'categorie' => '1'
+        ]);
+
+        DB::table('vraag')->insert([
+            'vragenlijst-id' => 1,
+            'vraag' => 'Werkt deze vraag?',
+            'vraagsoort' => 2,
+            'opties' => '',
+            'categorie' => '1'
+        ]);
     }
 }
