@@ -18,5 +18,15 @@ class AntwoordSeeder extends Seeder
             'vraag-id' => 1,
             'antwoord' => 'Ja, hij werkt!',
         ]);
+
+        DB::table('antwoorden')->insert([
+            'vraag-id' => 1,
+            'antwoord' => 'Ja, hij werkt!',
+        ]);
+
+        DB::table('antwoorden')->insert([
+            'vraag-id' => 2,
+            'antwoord' => 'Ja, hij werkt!',
+        ]);
     }
 }

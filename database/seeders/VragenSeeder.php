@@ -21,5 +21,13 @@ class VragenSeeder extends Seeder
             'opties' => '',
             'categorie' => '1'
         ]);
+
+        DB::table('vraag')->insert([
+            'vragenlijst-id' => 2,
+            'vraag' => 'Werkt deze vraag?',
+            'vraagsoort' => 1,
+            'opties' => '',
+            'categorie' => '1'
+        ]);
     }
 }

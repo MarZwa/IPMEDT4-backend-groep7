@@ -32,14 +32,18 @@ Route::group(['middleware' => ['auth:sanctum']], function(){
     Route::get('/mailgroep/{id}/emailadressen', [App\Http\Controllers\MailgroepController::class, 'emailadressen']);
 
     //VRAGENLIJST ROUTES
+    Route::GET('vragenlijsten/{id}/responsecount', [App\Http\Controllers\VragenlijstController::class, 'getAmountOfResponses']);
     Route::get('/vragenlijst/{id}', [App\Http\Controllers\VragenlijstController::class, 'show']);
     Route::get('/vragenlijst/{id}/codes', [App\Http\Controllers\VragenlijstController::class, 'codes']);
 
+    //RESPONSE COUNT ROUTE
+    
     //VRAAG ROUTES
     Route::get('/vraag/{id}', [App\Http\Controllers\VraagController::class, 'show']);
     Route::get('/vraag/{id}/antwoorden', [App\Http\Controllers\VraagController::class, 'antwoorden']);
     Route::get('/vraag/{id}/vraagsoort', [App\Http\Controllers\VraagController::class, 'vraagsoort']);
     Route::get('/vraag/{id}/categorie', [App\Http\Controllers\VraagController::class, 'categorie']);
+
 
     //SEND EMAIL ROUTE
     Route::POST('/send-email', [App\Http\Controllers\VragenlijstController::class, 'sendInviteMail']);
@@ -57,5 +61,6 @@ Route::POST('/users/create', [App\Http\Controllers\UserController::class, 'regis
 
 //LOGIN ROUTE
 Route::POST('/login', [App\Http\Controllers\UserController::class, 'login']);
+
 
 

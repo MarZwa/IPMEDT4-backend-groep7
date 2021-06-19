@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Vragenlijst;
 use App\Models\Mailgroep;
 use App\Models\Code;
+use App\Models\User;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\InviteMail;
 
@@ -39,6 +40,30 @@ class VragenlijstController extends Controller
     }
 
 
+    public function getAmountOfResponses($id){
+        $responseArray = [];
+        $vragenlijsten = \App\Models\User::find($id)->mijnVragenlijsten;
+
+        foreach($vragenlijsten as $index=>$vragenlijst){
+
+            $temp_vragenlijst = [
+                'id' => $vragenlijst->id,
+                'name' => $vragenlijst->name,
+                'responsecount' => $vragenlijst->mijnVragen->first()->mijnAntwoorden->count()
+            ];
+
+            $responseArray[$index] = $temp_vragenlijst;
+
+        }
+
+        $response = [
+            'vragenlijsten' => $responseArray,
+        ];
+
+        return response($response, 200);
+    }
+
+
     public function sendInviteMail(Request $request){
 
         $fields = $request->validate([
@@ -68,4 +93,5 @@ class VragenlijstController extends Controller
             Mail::to($receiver->email)->send(new InviteMail($details));
         }
     }
+
 }
