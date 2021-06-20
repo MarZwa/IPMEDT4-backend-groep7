@@ -10,4 +10,9 @@ class Antwoord extends Model
     use HasFactory;
 
     protected $table = 'antwoorden';
+
+    protected $fillable =  [
+        'vraag-id',
+        'antwoord'
+    ];
 }

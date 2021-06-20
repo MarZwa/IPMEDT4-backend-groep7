@@ -43,3 +43,6 @@ Route::get('/vraag/{id}/categorie', [App\Http\Controllers\VraagController::class
 //CODE ROUTES
 Route::get('/code/{code}', [App\Http\Controllers\CodeController::class, 'show']);
 Route::get('/code/{code}/vragenlijst', [App\Http\Controllers\CodeController::class, 'vragenlijst']);
+
+//ANSWER SUBMIT 
+Route::POST('/antwoord/submit', [App\Http\Controllers\AntwoordController::class, 'submit']);
