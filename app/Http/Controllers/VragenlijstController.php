@@ -7,6 +7,7 @@ use App\Models\Vragenlijst;
 use App\Models\Mailgroep;
 use App\Models\Code;
 use App\Models\User;
+use App\Models\Vraag;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\InviteMail;
 
@@ -87,11 +88,43 @@ class VragenlijstController extends Controller
 
             $details = [
                 'title' => $vragenlijst->name,
-                'body' => $newcode, 
+                'body' => $newcode,
             ];
-    
+
             Mail::to($receiver->email)->send(new InviteMail($details));
         }
+    }
+
+    public function create(Request $request) {
+
+            $fields = $request->validate([
+                'vragenlijst' => 'required',
+                'eigenaarId' => 'required',
+                'vragenlijstNaam' => 'required',
+            ]);
+
+            $nieuweVragenlijst = Vragenlijst::create([
+                'eigenaar-id' => $fields['eigenaarId'],
+                'name' => $fields['vragenlijstNaam'],
+                'link' => '',
+            ]);
+
+            $id = $nieuweVragenlijst->id;
+
+            $vragenlijst = $fields['vragenlijst'];
+
+            foreach($vragenlijst as $vraag) {
+                Vraag::create([
+                    'vragenlijst-id' => $id,
+                    'vraag' => $vraag['vraag'],
+                    'opties' => '',
+                    'vraagsoort' => $vraag['type'],
+                    'categorie' => 1,
+                ]);
+                // return response([
+                //     'message' => $vraag['vraag'],
+                // ], 401);
+            }
     }
 
 }
