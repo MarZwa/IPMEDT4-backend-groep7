@@ -25,6 +25,61 @@ class AntwoordSeeder extends Seeder
         ]);
 
         DB::table('antwoorden')->insert([
+            'vraag-id' => 1,
+            'antwoord' => 'Nee, hij werkt niet!',
+        ]);
+
+        DB::table('antwoorden')->insert([
+            'vraag-id' => 1,
+            'antwoord' => 'Nee, hij werkt niet!',
+        ]);
+
+        DB::table('antwoorden')->insert([
+            'vraag-id' => 1,
+            'antwoord' => 'Nee, hij werkt niet!',
+        ]);
+
+        DB::table('antwoorden')->insert([
+            'vraag-id' => 1,
+            'antwoord' => 'Nee, hij werkt niet!',
+        ]);
+
+        DB::table('antwoorden')->insert([
+            'vraag-id' => 1,
+            'antwoord' => 'Nee, hij werkt niet!',
+        ]);
+
+        DB::table('antwoorden')->insert([
+            'vraag-id' => 1,
+            'antwoord' => 'Nee, hij werkt niet!',
+        ]);
+
+        DB::table('antwoorden')->insert([
+            'vraag-id' => 1,
+            'antwoord' => 'Nee, hij werkt niet!',
+        ]);
+
+        DB::table('antwoorden')->insert([
+            'vraag-id' => 1,
+            'antwoord' => 'Nee, hij werkt niet!',
+        ]);
+
+        DB::table('antwoorden')->insert([
+            'vraag-id' => 1,
+            'antwoord' => 'Nee, hij werkt niet!',
+        ]);
+
+        DB::table('antwoorden')->insert([
+            'vraag-id' => 1,
+            'antwoord' => 'Nee, hij werkt niet!',
+        ]);
+
+        DB::table('antwoorden')->insert([
+            'vraag-id' => 1,
+            'antwoord' => 'Nee, hij werkt niet!',
+        ]);
+
+        DB::table('antwoorden')->insert([
             'vraag-id' => 2,
             'antwoord' => '1',
         ]);
@@ -35,8 +90,33 @@ class AntwoordSeeder extends Seeder
         ]);
 
         DB::table('antwoorden')->insert([
+            'vraag-id' => 2,
+            'antwoord' => '2',
+        ]);
+
+        DB::table('antwoorden')->insert([
+            'vraag-id' => 2,
+            'antwoord' => '3',
+        ]);
+
+        DB::table('antwoorden')->insert([
+            'vraag-id' => 2,
+            'antwoord' => '4',
+        ]);
+
+        DB::table('antwoorden')->insert([
+            'vraag-id' => 2,
+            'antwoord' => '5',
+        ]);
+
+        DB::table('antwoorden')->insert([
             'vraag-id' => 3,
             'antwoord' => 'Henk',
+        ]);
+
+        DB::table('antwoorden')->insert([
+            'vraag-id' => 3,
+            'antwoord' => 'Ingrid',
         ]);
 
         DB::table('antwoorden')->insert([
