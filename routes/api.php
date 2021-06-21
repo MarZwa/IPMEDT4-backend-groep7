@@ -20,7 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 
 //PROTECTED BY AUTH
-Route::group(['middleware' => ['auth:sanctum']], function(){
+Route::group(['middleware' => ['auth:sanctum']], function () {
     //USER ROUTES
     Route::get('/user/{id}', [App\Http\Controllers\UserController::class, 'show']);
     Route::get('/user/{id}/vragenlijsten', [App\Http\Controllers\UserController::class, 'vragenlijsten']);
@@ -35,9 +35,10 @@ Route::group(['middleware' => ['auth:sanctum']], function(){
     Route::GET('vragenlijsten/{id}/responsecount', [App\Http\Controllers\VragenlijstController::class, 'getAmountOfResponses']);
     Route::get('/vragenlijst/{id}', [App\Http\Controllers\VragenlijstController::class, 'show']);
     Route::get('/vragenlijst/{id}/codes', [App\Http\Controllers\VragenlijstController::class, 'codes']);
+    Route::get('/vragenlijst/{id}/hergebruiken', [App\Http\Controllers\VragenlijstController::class, 'copyList']);
 
     //RESPONSE COUNT ROUTE
-    
+
     //VRAAG ROUTES
     Route::get('/vraag/{id}', [App\Http\Controllers\VraagController::class, 'show']);
     Route::get('/vraag/{id}/antwoorden', [App\Http\Controllers\VraagController::class, 'antwoorden']);
@@ -61,6 +62,3 @@ Route::POST('/users/create', [App\Http\Controllers\UserController::class, 'regis
 
 //LOGIN ROUTE
 Route::POST('/login', [App\Http\Controllers\UserController::class, 'login']);
-
-
-
