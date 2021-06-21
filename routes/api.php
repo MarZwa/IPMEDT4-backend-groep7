@@ -28,10 +28,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     Route::get('/user/{id}/mailgroepen', [App\Http\Controllers\UserController::class, 'mailgroepen']);
 
     //MAILGROEP ROUTES
+    
     Route::get('/mailgroep/{id}', [App\Http\Controllers\MailgroepController::class, 'show']);
     Route::get('/mailgroep/{id}/emailadressen', [App\Http\Controllers\MailgroepController::class, 'emailadressen']);
-
-    Route::post('/mailgroep/create', [App\Http\Controllers\EmailadresController::class, 'create']);
+    Route::post('/mailgroep/{id}/emailadressen', [App\Http\Controllers\MailgroepController::class, 'store']);
+    
 
     //VRAGENLIJST ROUTES
     Route::get('/vragenlijst/{id}', [App\Http\Controllers\VragenlijstController::class, 'show']);

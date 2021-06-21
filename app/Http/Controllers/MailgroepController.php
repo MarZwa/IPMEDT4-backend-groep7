@@ -15,4 +15,15 @@ class MailgroepController extends Controller
         $emailadressen = \App\Models\Mailgroep::find($id)->mijnEmailadressen;
         return $emailadressen;
     }
+
+    public function store(Request $request) {
+        $this->validate($request, array(
+            'mailgroep-id' => 'required|numeric',
+            'email' => 'required|email'
+        ));
+        $email = new emailadressen;
+        $email->{mailgroep-id} = $request->{mailgroep-id};
+        $email->email = $request->email;
+        $email->save();
+    }
 }
