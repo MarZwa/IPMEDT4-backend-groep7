@@ -117,13 +117,10 @@ class VragenlijstController extends Controller
                 Vraag::create([
                     'vragenlijst-id' => $id,
                     'vraag' => $vraag['vraag'],
-                    'opties' => '',
+                    'opties' => $vraag['opties'],
                     'vraagsoort' => $vraag['type'],
                     'categorie' => 1,
                 ]);
-                // return response([
-                //     'message' => $vraag['vraag'],
-                // ], 401);
             }
     }
 
