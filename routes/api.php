@@ -20,7 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 
 //PROTECTED BY AUTH
-Route::group(['middleware' => ['auth:sanctum']], function(){
+// Route::group(['middleware' => ['auth:sanctum']], function(){
     //USER ROUTES
     Route::get('/user/{id}', [App\Http\Controllers\UserController::class, 'show']);
     Route::get('/user/{id}/vragenlijsten', [App\Http\Controllers\UserController::class, 'vragenlijsten']);
@@ -30,6 +30,8 @@ Route::group(['middleware' => ['auth:sanctum']], function(){
     //MAILGROEP ROUTES
     Route::get('/mailgroep/{id}', [App\Http\Controllers\MailgroepController::class, 'show']);
     Route::get('/mailgroep/{id}/emailadressen', [App\Http\Controllers\MailgroepController::class, 'emailadressen']);
+
+    Route::post('/mailgroep/create', [App\Http\Controllers\EmailadresController::class, 'create']);
 
     //VRAGENLIJST ROUTES
     Route::get('/vragenlijst/{id}', [App\Http\Controllers\VragenlijstController::class, 'show']);
@@ -41,7 +43,7 @@ Route::group(['middleware' => ['auth:sanctum']], function(){
     Route::get('/vraag/{id}/antwoorden', [App\Http\Controllers\VraagController::class, 'antwoorden']);
     Route::get('/vraag/{id}/vraagsoort', [App\Http\Controllers\VraagController::class, 'vraagsoort']);
     Route::get('/vraag/{id}/categorie', [App\Http\Controllers\VraagController::class, 'categorie']);
-});
+// });
 
 
 
