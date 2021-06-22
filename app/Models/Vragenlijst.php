@@ -11,6 +11,12 @@ class Vragenlijst extends Model
 
     protected $table = 'vragenlijst';
 
+    protected $fillable = [
+        'eigenaar-id',
+        'name',
+        'link',
+    ];
+
     public function mijnVragen(){
         return $this->hasMany(\App\Models\Vraag::class, "vragenlijst-id");
     }
