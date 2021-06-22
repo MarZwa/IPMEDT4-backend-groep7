@@ -28,8 +28,11 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('/user/{id}/mailgroepen', [App\Http\Controllers\UserController::class, 'mailgroepen']);
 
     //MAILGROEP ROUTES
+
     Route::get('/mailgroep/{id}', [App\Http\Controllers\MailgroepController::class, 'show']);
     Route::get('/mailgroep/{id}/emailadressen', [App\Http\Controllers\MailgroepController::class, 'emailadressen']);
+    Route::post('/mailgroep/{id}/emailadressen', [App\Http\Controllers\MailgroepController::class, 'store']);
+
 
     //VRAGENLIJST ROUTES
     Route::GET('vragenlijsten/{id}/responsecount', [App\Http\Controllers\VragenlijstController::class, 'getAmountOfResponses']);
