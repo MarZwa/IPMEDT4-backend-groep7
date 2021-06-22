@@ -63,3 +63,6 @@ Route::POST('/users/create', [App\Http\Controllers\UserController::class, 'regis
 
 //LOGIN ROUTE
 Route::POST('/login', [App\Http\Controllers\UserController::class, 'login']);
+
+//ANSWER SUBMIT
+Route::POST('/antwoord/submit', [App\Http\Controllers\AntwoordController::class, 'submit']);
