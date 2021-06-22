@@ -104,7 +104,7 @@ class VragenlijstController extends Controller
         $vragenlijst = \App\Models\Vragenlijst::find($id);
 
         $duplicate = $vragenlijst->replicate();
-        $duplicate->name = $duplicate->name . " Kopie";
+        $duplicate->name = $duplicate->name . " " . date('d-m-y');
         $duplicate->save();
 
         $vragenArray = $vragenlijst->mijnVragen;

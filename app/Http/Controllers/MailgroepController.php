@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Imports\EmailadresImport;
+use App\Models\Emailadres;
+use App\Http\Controllers\Excel;
+
 
 class MailgroepController extends Controller
 {
@@ -19,16 +22,16 @@ class MailgroepController extends Controller
 
     public function store(Request $request) {
         $this->validate($request, array(
-            'mailgroep-id' => 'required|numeric',
+            'mailgroepId' => 'required|numeric',
             'email' => 'required|email'
         ));
-        $email = new emailadressen;
-        $email->{mailgroep-id} = $request->{mailgroep-id};
-        $email->email = $request->email;
-        $email->save();
+        $email = Emailadres::create([
+            'mailgroep-id' => $request->mailgroepId,
+            'email' => $request->email,
+        ]);
     }
 
-    public function importCsv() {
-        Excel::import(new EmailadresImport, request()->file('file'));
-    }
+    // public function importCsv() {
+    //     Excel::import(new EmailadresImport, request()->file('file'));
+    // }
 }

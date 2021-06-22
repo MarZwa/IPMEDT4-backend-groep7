@@ -9,5 +9,11 @@ class Emailadres extends Model
 {
     use HasFactory;
 
+    public $timestamps = false;
+
     protected $table = 'emailadressen';
+    protected $fillable = [
+        'email',
+        'mailgroep-id'
+    ];
 }
