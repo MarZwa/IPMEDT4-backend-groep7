@@ -19,5 +19,7 @@ class CodeController extends Controller
         return $vragenlijst;
     }
 
-    
+    public function delete($code){
+        \App\Models\Code::where('code','=',$code)->delete();
+    }
 }
