@@ -11,16 +11,27 @@ class Vraag extends Model
 
     protected $table = 'vraag';
 
+    protected $fillable = [
+        'vraag',
+        'opties',
+        'vraagsoort',
+        'categorie',
+        'vragenlijst-id',
+    ];
 
-    public function mijnAntwoorden(){
+
+    public function mijnAntwoorden()
+    {
         return $this->hasMany(\App\Models\Antwoord::class, "vraag-id");
     }
 
-    public function mijnVraagsoort(){
+    public function mijnVraagsoort()
+    {
         return $this->hasOne(\App\Models\Vraagsoort::class, "id", "vraagsoort");
     }
 
-    public function mijnCategorie(){
+    public function mijnCategorie()
+    {
         return $this->hasOne(\App\Models\Categorie::class, "id", "categorie");
-    }    
+    }
 }
