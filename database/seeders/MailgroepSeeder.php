@@ -16,7 +16,7 @@ class MailgroepSeeder extends Seeder
     {
         DB::table('mailgroep')->insert([
             'eigenaar-id' => 1,
-            'name' => "Test Mailgroep",
+            'name' => "Demo Mailgroep",
         ]);
     }
 }
