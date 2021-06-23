@@ -100,12 +100,12 @@ class VragenlijstController extends Controller
         }
     }
 
-    public function copyList($id)
+    public function copyList($id, $naam)
     {
         $vragenlijst = \App\Models\Vragenlijst::find($id);
 
         $duplicate = $vragenlijst->replicate();
-        $duplicate->name = $duplicate->name . " Kopie";
+        $duplicate->name = $naam;
         $duplicate->save();
 
         $vragenArray = $vragenlijst->mijnVragen;

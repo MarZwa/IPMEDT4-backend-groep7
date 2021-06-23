@@ -35,7 +35,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::GET('vragenlijsten/{id}/responsecount', [App\Http\Controllers\VragenlijstController::class, 'getAmountOfResponses']);
     Route::get('/vragenlijst/{id}', [App\Http\Controllers\VragenlijstController::class, 'show']);
     Route::get('/vragenlijst/{id}/codes', [App\Http\Controllers\VragenlijstController::class, 'codes']);
-    Route::get('/vragenlijst/{id}/hergebruiken', [App\Http\Controllers\VragenlijstController::class, 'copyList']);
+    Route::get('/vragenlijst/{id}/{naam}/hergebruiken', [App\Http\Controllers\VragenlijstController::class, 'copyList']);
 
     //RESPONSE COUNT ROUTE
 
