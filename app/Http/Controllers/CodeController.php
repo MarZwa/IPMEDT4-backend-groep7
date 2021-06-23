@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\InviteMail;
 
 class CodeController extends Controller
 {
@@ -16,4 +18,6 @@ class CodeController extends Controller
         $vragenlijst = \App\Models\Code::where('code','=',$code)->first()->mijnVragenlijst;
         return $vragenlijst;
     }
+
+    
 }

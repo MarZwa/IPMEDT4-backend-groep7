@@ -19,5 +19,11 @@ class VragenlijstSeeder extends Seeder
             'eigenaar-id' => 1,
             'link' => 'testlink.com',
         ]);
+
+        DB::table('vragenlijst')->insert([
+            'name' => "Vragenlijst twee",
+            'eigenaar-id' => 1,
+            'link' => 'testlink.com',
+        ]);
     }
 }
