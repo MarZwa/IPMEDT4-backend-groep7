@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Imports\EmailadresImport;
-use App\Models\Emailadres;
+use App\Models\Mailgroep;
 use App\Http\Controllers\Excel;
 
 
@@ -20,14 +20,14 @@ class MailgroepController extends Controller
         return $emailadressen;
     }
 
-    public function store(Request $request) {
+    public function create(Request $request) {
         $this->validate($request, array(
-            'mailgroepId' => 'required|numeric',
-            'email' => 'required|email'
+            'eigenaarId' => 'required|numeric',
+            'name' => 'required|string'
         ));
-        $email = Emailadres::create([
-            'mailgroep-id' => $request->mailgroepId,
-            'email' => $request->email,
+        $mailgroep = Mailgroep::create([
+            'eigenaar-id' => $request->eigenaarId,
+            'name' => $request->name,
         ]);
     }
 

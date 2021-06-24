@@ -31,7 +31,8 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 
     Route::get('/mailgroep/{id}', [App\Http\Controllers\MailgroepController::class, 'show']);
     Route::get('/mailgroep/{id}/emailadressen', [App\Http\Controllers\MailgroepController::class, 'emailadressen']);
-    Route::post('/mailgroep/{id}/emailadressen', [App\Http\Controllers\MailgroepController::class, 'store']);
+    Route::post('/mailgroep', [App\Http\Controllers\MailgroepController::class, 'create']);
+    Route::post('/mailgroep/{id}/emailadressen/create', [App\Http\Controllers\EmailController::class, 'create']);
 
 
     //VRAGENLIJST ROUTES
