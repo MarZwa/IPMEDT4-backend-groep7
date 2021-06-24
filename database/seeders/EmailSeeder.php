@@ -16,16 +16,6 @@ class EmailSeeder extends Seeder
     {
         DB::table('emailadressen')->insert([
             'mailgroep-id' => 1,
-            'email' => "joeypeschier@gmail.com"
-        ]);
-
-        DB::table('emailadressen')->insert([
-            'mailgroep-id' => 1,
-            'email' => "s1120743@student.hsleiden.nl"
-        ]);
-
-        DB::table('emailadressen')->insert([
-            'mailgroep-id' => 1,
             'email' => "testemail2@invuller.com"
         ]);
 
@@ -41,6 +31,16 @@ class EmailSeeder extends Seeder
 
         DB::table('emailadressen')->insert([
             'mailgroep-id' => 1,
+            'email' => "testemail5@invuller.com"
+        ]);
+
+        DB::table('emailadressen')->insert([
+            'mailgroep-id' => 2,
+            'email' => "testemail4@invuller.com"
+        ]);
+
+        DB::table('emailadressen')->insert([
+            'mailgroep-id' => 2,
             'email' => "testemail5@invuller.com"
         ]);
     }
