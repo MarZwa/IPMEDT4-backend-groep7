@@ -19,7 +19,7 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['*'],
+    'allowed_origins' => ['ipmedt4.tychovanveen.nl'],
 
     'allowed_origins_patterns' => [],
 
