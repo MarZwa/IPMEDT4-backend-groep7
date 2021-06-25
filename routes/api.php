@@ -62,7 +62,7 @@ Route::get('/code/{code}', [App\Http\Controllers\CodeController::class, 'show'])
 Route::get('/code/{code}/vragenlijst', [App\Http\Controllers\CodeController::class, 'vragenlijst']);
 Route::get('/vragenlijst/{id}/vragen', [App\Http\Controllers\VragenlijstController::class, 'vragen']);
 
-//REGISTER ROUTE OWO
+//REGISTER ROUTE
 Route::POST('/users/create', [App\Http\Controllers\UserController::class, 'register']);
 
 //LOGIN ROUTE
