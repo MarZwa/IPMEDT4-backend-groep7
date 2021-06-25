@@ -31,6 +31,8 @@ return [
 
     'supports_credentials' => true,
 
-    'Access-Control-Allow-Origin' => 'https://ipmedt4.tychovanveen.nl/',
+    'Access-Control-Allow-Origin' => ['*'],
+
+    'Access-Control-Allow-Methods' => ['GET', 'POST', 'OPTIONS']
 
 ];

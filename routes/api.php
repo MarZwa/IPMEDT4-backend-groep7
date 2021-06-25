@@ -54,8 +54,6 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::POST('/send-email', [App\Http\Controllers\VragenlijstController::class, 'sendInviteMail']);
 });
 
-
-
 //CODE ROUTES
 Route::get('/code/{code}', [App\Http\Controllers\CodeController::class, 'show']);
 Route::get('/code/{code}/vragenlijst', [App\Http\Controllers\CodeController::class, 'vragenlijst']);
