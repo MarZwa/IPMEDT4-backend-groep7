@@ -12,6 +12,7 @@ class Emailadres extends Model
     public $timestamps = false;
 
     protected $table = 'emailadressen';
+    
     protected $fillable = [
         'email',
         'mailgroep-id'

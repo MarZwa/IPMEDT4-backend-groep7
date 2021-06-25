@@ -100,11 +100,12 @@ class VragenlijstController extends Controller
         };
     }
 
-    public function copyList($id) {
+    public function copyList($id, $naam)
+    {
         $vragenlijst = \App\Models\Vragenlijst::find($id);
 
         $duplicate = $vragenlijst->replicate();
-        $duplicate->name = $duplicate->name . " " . date('d-m-y');
+        $duplicate->name = $naam;
         $duplicate->save();
 
         $vragenArray = $vragenlijst->mijnVragen;
@@ -122,33 +123,33 @@ class VragenlijstController extends Controller
         }
     }
 
-    public function create(Request $request) {
+    public function create(Request $request)
+    {
 
-            $fields = $request->validate([
-                'vragenlijst' => 'required',
-                'eigenaarId' => 'required',
-                'vragenlijstNaam' => 'required',
+        $fields = $request->validate([
+            'vragenlijst' => 'required',
+            'eigenaarId' => 'required',
+            'vragenlijstNaam' => 'required',
+        ]);
+
+        $nieuweVragenlijst = Vragenlijst::create([
+            'eigenaar-id' => $fields['eigenaarId'],
+            'name' => $fields['vragenlijstNaam'],
+            'link' => '',
+        ]);
+
+        $id = $nieuweVragenlijst->id;
+
+        $vragenlijst = $fields['vragenlijst'];
+
+        foreach ($vragenlijst as $vraag) {
+            Vraag::create([
+                'vragenlijst-id' => $id,
+                'vraag' => $vraag['vraag'],
+                'opties' => $vraag['opties'],
+                'vraagsoort' => $vraag['type'],
+                'categorie' => 1,
             ]);
-
-            $nieuweVragenlijst = Vragenlijst::create([
-                'eigenaar-id' => $fields['eigenaarId'],
-                'name' => $fields['vragenlijstNaam'],
-                'link' => '',
-            ]);
-
-            $id = $nieuweVragenlijst->id;
-
-            $vragenlijst = $fields['vragenlijst'];
-
-            foreach($vragenlijst as $vraag) {
-                Vraag::create([
-                    'vragenlijst-id' => $id,
-                    'vraag' => $vraag['vraag'],
-                    'opties' => $vraag['opties'],
-                    'vraagsoort' => $vraag['type'],
-                    'categorie' => 1,
-                ]);
-            }
+        }
     }
-
 }

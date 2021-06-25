@@ -31,14 +31,15 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 
     Route::get('/mailgroep/{id}', [App\Http\Controllers\MailgroepController::class, 'show']);
     Route::get('/mailgroep/{id}/emailadressen', [App\Http\Controllers\MailgroepController::class, 'emailadressen']);
-    Route::post('/mailgroep/{id}/emailadressen', [App\Http\Controllers\MailgroepController::class, 'store']);
+    Route::post('/mailgroep', [App\Http\Controllers\MailgroepController::class, 'create']);
+    Route::post('/mailgroep/{id}/emailadressen/create', [App\Http\Controllers\EmailController::class, 'create']);
 
 
     //VRAGENLIJST ROUTES
     Route::GET('vragenlijsten/{id}/responsecount', [App\Http\Controllers\VragenlijstController::class, 'getAmountOfResponses']);
     Route::get('/vragenlijst/{id}', [App\Http\Controllers\VragenlijstController::class, 'show']);
     Route::get('/vragenlijst/{id}/codes', [App\Http\Controllers\VragenlijstController::class, 'codes']);
-    Route::get('/vragenlijst/{id}/hergebruiken', [App\Http\Controllers\VragenlijstController::class, 'copyList']);
+    Route::get('/vragenlijst/{id}/{naam}/hergebruiken', [App\Http\Controllers\VragenlijstController::class, 'copyList']);
     Route::post('/vragenlijst/create', [App\Http\Controllers\VragenlijstController::class, 'create']);
 
     //RESPONSE COUNT ROUTE
