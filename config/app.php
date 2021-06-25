@@ -1,6 +1,6 @@
 <?php
-
 return [
+    header('Access-Control-Allow-Origin: *'),
 
     /*
     |--------------------------------------------------------------------------
@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost'),
+    'url' => env('APP_URL', 'https://api-ipmedt4.tychovanveen.nl/public/'),
 
     'asset_url' => env('ASSET_URL', null),
 
@@ -231,3 +231,5 @@ return [
     ],
 
 ];
+
+?>

@@ -12,13 +12,13 @@
         <h2>{{ $details['title'] }}</h2>
         <h3>Klik op deze knop:</h3>
         <br>
-        <a style="color: white; background-color: #F7B733; padding: 20px; text-decoration: none; border-radius: 15px" class="link" href="http://localhost:3000/codeinvoeren/{{ $details['body'] }}">Tevredenheidsonderzoek</a>
+        <a style="color: white; background-color: #F7B733; padding: 20px; text-decoration: none; border-radius: 15px" class="link" href="https://ipmedt4.tychovanveen.nl/codeinvoeren/{{ $details['body'] }}">Tevredenheidsonderzoek</a>
         <br>
         <br>
         <h3>Of gebruik code: </h3>
         <h2>{{ $details['body'] }}  </h2>
         <h2>op</h2>
-        <a href="http://localhost:3000/codeinvoeren">www.ipmedt4tevredenheidsonderzoek.nl</a>
+        <a href="https://ipmedt4.tychovanveen.nl/codeinvoeren">www.ipmedt4-tevredenheidsonderzoek.nl</a>
     </div>
 </body>
 </html>
