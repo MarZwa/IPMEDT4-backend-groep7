@@ -15,13 +15,13 @@ class VragenlijstSeeder extends Seeder
     public function run()
     {
         DB::table('vragenlijst')->insert([
-            'name' => "Test Vragenlijst",
+            'name' => "Tevredenheidsonderzoek 2020",
             'eigenaar-id' => 1,
             'link' => 'testlink.com',
         ]);
 
         DB::table('vragenlijst')->insert([
-            'name' => "Vragenlijst twee",
+            'name' => "Tevredenheidsonderzoek 2021",
             'eigenaar-id' => 1,
             'link' => 'testlink.com',
         ]);
